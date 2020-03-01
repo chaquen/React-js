@@ -37,22 +37,22 @@ Cada componente tiene varios "métodos de ciclo de vida", que se pueden sobreesc
 En la lista de abajo, los métodos de ciclo de vida comúnmente usados están marcados en **negrita**. El resto de ellos existen para casos de uso relativamente raros.
 
 ## Montaje
-__*[constructor()](https://es.reactjs.org/docs/react-component.html#constructor)**
+***[constructor()](https://es.reactjs.org/docs/react-component.html#constructor)**
 * [static getDerivedStateFromProps()](https://es.reactjs.org/docs/react-component.html#static-getderivedstatefromprops)
-__*[render()](https://es.reactjs.org/docs/react-component.html#render)**
-__*[componentDidMount()](https://es.reactjs.org/docs/react-component.html#componentdidmount)**
+***[render()](https://es.reactjs.org/docs/react-component.html#render)**
+***[componentDidMount()](https://es.reactjs.org/docs/react-component.html#componentdidmount)**
 
 ## Actualización
 
 * [static getDerivedStateFromProps()](https://es.reactjs.org/docs/react-component.html#static-getderivedstatefromprops)
 * [shouldComponentUpdate()](https://es.reactjs.org/docs/react-component.html#shouldcomponentupdate)
-__*[render()](https://es.reactjs.org/docs/react-component.html#render)**
+***[render()](https://es.reactjs.org/docs/react-component.html#render)**
 * [getSnapshotBeforeUpdate()](https://es.reactjs.org/docs/react-component.html#getsnapshotbeforeupdate)
-__*[componentDidUpdate()](https://es.reactjs.org/docs/react-component.html#componentdidupdate)**	
+***[componentDidUpdate()](https://es.reactjs.org/docs/react-component.html#componentdidupdate)**	
 
 ## Desmontaje
 
-__*[componentWillUnmount()](https://es.reactjs.org/docs/react-component.html#componentwillunmount)**
+***[componentWillUnmount()](https://es.reactjs.org/docs/react-component.html#componentwillunmount)**
 
 ### Para ampliar la información puedes ver el siguiente [link](https://es.reactjs.org/docs/react-component.html) 
 
@@ -60,7 +60,7 @@ __*[componentWillUnmount()](https://es.reactjs.org/docs/react-component.html#com
 ## [render()](https://es.reactjs.org/docs/react-component.html#render)
 
 El método render() es el único método requerido en un **componente de clase**.
-Cuando se llama, debe examinar a __this.props__ y __this.state__ y devolver uno de los siguientes tipos:
+Cuando se llama, debe examinar a **this.props** y **this.state** y devolver uno de los siguientes tipos:
 
 * **Elementos de React.** normalmente creados a través de JSX. Por ejemplo, <div /> y <MyComponent /> son elementos de React que enseñan a React a renderizar un nodo DOM, u otro componente definido por el usuario, respectivamente.
 * **Arrays y fragmentos.** Permiten que puedas devolver múltiples elementos desde el render. Consulta la documentación sobre fragmentos para más detalles.
@@ -79,19 +79,19 @@ El constructor para un componente React es llamado antes de ser montado. Al impl
 
 Normalmente, los constructores de React sólo se utilizan para dos propósitos:
 
-* Para inicializar un estado local asignando un objeto al __this.state__.
+* Para inicializar un estado local asignando un objeto al **this.state**.
 
 * Para enlazar manejadores de eventos a una instancia.
 
-No debes llamar __setState()__ en el __constructor()__. En su lugar, si su componente necesita usar el estado local, asigna directamente el estado inicial al __this.state__ directamente en el constructor:
+No debes llamar **setState()** en el **constructor()**. En su lugar, si su componente necesita usar el estado local, asigna directamente el estado inicial al **this.state** directamente en el constructor:
 
 **El constructor es el único lugar donde debes asignar this.state directamente. En todos los demás métodos, debes usar this.setState() en su lugar.**
 
 ## [componentDidMount()](https://es.reactjs.org/docs/react-component.html#componentdidmount)
 
-componentDidMount() se invoca inmediatamente después de que un componente se monte (se inserte en el árbol). La inicialización que requiere nodos DOM debería ir aquí. Si necesita cargar datos desde un punto final remoto, este es un buen lugar para instanciar **la solicitud de red**.
+**componentDidMount()** se invoca inmediatamente después de que un componente se monte (se inserte en el árbol). La inicialización que requiere nodos DOM debería ir aquí. Si necesita cargar datos desde un punto final remoto, este es un buen lugar para instanciar **la solicitud de red**.
 
-Este método es un buen lugar para establecer cualquier suscripción. Si lo haces, no olvides darle de baja en __componentWillUnmount()__.
+Este método es un buen lugar para establecer cualquier suscripción. Si lo haces, no olvides darle de baja en **componentWillUnmount()**.
 
 ## [componentDidUpdate()](https://es.reactjs.org/docs/react-component.html#componentdidupdate)
 
@@ -101,4 +101,4 @@ Use esto como una oportunidad para operar en DOM cuando el componente se haya ac
 
 ## [componentWillUnmount()](https://es.reactjs.org/docs/react-component.html#componentwillunmount)
 
-componentWillUnmount() se invoca inmediatamente antes de desmontar y destruir un componente. Realiza las tareas de limpieza necesarias en este método, como la invalidación de temporizadores, la cancelación de solicitudes de red o la eliminación de las suscripciones que se crearon en __componentDidMount()__.
+componentWillUnmount() se invoca inmediatamente antes de desmontar y destruir un componente. Realiza las tareas de limpieza necesarias en este método, como la invalidación de temporizadores, la cancelación de solicitudes de red o la eliminación de las suscripciones que se crearon en **componentDidMount()**.
