@@ -46,9 +46,9 @@ En la lista de abajo, los métodos de ciclo de vida comúnmente usados están ma
 
 * [static getDerivedStateFromProps()](https://es.reactjs.org/docs/react-component.html#static-getderivedstatefromprops)
 * [shouldComponentUpdate()](https://es.reactjs.org/docs/react-component.html#shouldcomponentupdate)
-***[render()](https://es.reactjs.org/docs/react-component.html#render)**
+* **[render()](https://es.reactjs.org/docs/react-component.html#render)**
 * [getSnapshotBeforeUpdate()](https://es.reactjs.org/docs/react-component.html#getsnapshotbeforeupdate)
-***[componentDidUpdate()](https://es.reactjs.org/docs/react-component.html#componentdidupdate)**	
+* **[componentDidUpdate()](https://es.reactjs.org/docs/react-component.html#componentdidupdate)**	
 
 ## Desmontaje
 
